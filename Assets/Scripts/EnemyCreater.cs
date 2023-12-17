@@ -2,22 +2,16 @@ using UnityEngine;
 
 public interface IEnemySpawner
 {
-    void SpawnEnemy();
+    void SpawnEnemy(Vector3 newPosition);
 }
 
 public class EnemyCreater : MonoBehaviour, IEnemySpawner
 {
-    [SerializeField] private GameObject _enemy;
+    [SerializeField] private EnemyMover _enemy;
 
-    private Vector3 _startPosition;
-
-    private void Start()
+    public void SpawnEnemy(Vector3 direction)
     {
-        _startPosition = transform.position;
-    }
-
-    public void SpawnEnemy()
-    {
-        GameObject enemy = Instantiate(_enemy, _startPosition, Quaternion.identity);
+        EnemyMover createdEnemy = Instantiate(_enemy, transform.position, Quaternion.identity);
+        createdEnemy.SetDirection(direction);
     }
 }
