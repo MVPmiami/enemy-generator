@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 982d026bcfb0347458caacc390b55d48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemy: {fileID: 8411317848906915409, guid: 59c21281b8a56e64b827bfa5741c7787, type: 3}
+  _enemy: {fileID: -1333429542663958865, guid: 59c21281b8a56e64b827bfa5741c7787, type: 3}
 --- !u!1001 &129592030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -376,7 +376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 982d026bcfb0347458caacc390b55d48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemy: {fileID: 8411317848906915409, guid: 59c21281b8a56e64b827bfa5741c7787, type: 3}
+  _enemy: {fileID: -1333429542663958865, guid: 59c21281b8a56e64b827bfa5741c7787, type: 3}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
