@@ -3,11 +3,11 @@ using UnityEngine;
 public class EnemyMover : MonoBehaviour
 {
     private float _speed;
-    private Vector3 _direction;
+    private Target _target;
 
     private void Start()
     {
-        _speed = 8;
+        _speed = 2f;
     }
 
     private void Update()
@@ -15,15 +15,15 @@ public class EnemyMover : MonoBehaviour
         Move();
     }
 
-    public void SetDirection(Vector3 direction)
+    public void SetDirection( Target target)
     {
-        _direction = direction;
+        _target  = target;
     }
 
     private void Move()
     {
         float step = _speed * Time.deltaTime;
 
-        transform.position = Vector3.MoveTowards(transform.position, _direction, step);
+        transform.position = Vector3.Lerp(transform.position, _target.transform.position, step);
     }
 }
